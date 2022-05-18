@@ -1,0 +1,257 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000005a1fffb0, pid=22544, tid=0x0000000000004b8c
+#
+# JRE version: OpenJDK Runtime Environment (8.0_332-b08) (build 1.8.0_332-b08)
+# Java VM: OpenJDK 64-Bit Server VM (25.332-b08 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x5fffb0]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/corretto/corretto-8/issues/
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000206f8cf8800):  WatcherThread [stack: 0x0000007fb4000000,0x0000007fb4100000] [id=19340]
+
+siginfo: ExceptionCode=0xc0000005, ExceptionInformation=0x0000000000000008 0x000000005a1fffb0
+
+Registers:
+RAX=0x00000206f8c48000, RBX=0x00000206db020350, RCX=0x00000206f8c43270, RDX=0x0000000000001388
+RSP=0x0000007fb40ff568, RBP=0x0000000000000002, RSI=0x000000005a3ec9f0, RDI=0x0000000000000000
+R8 =0x0000000000001365, R9 =0x0000000000000083, R10=0x00000000546c6148, R11=0x000000020d667c31
+R12=0x0000000000000000, R13=0x0000000000000000, R14=0x0000000000000023, R15=0x0000000000000000
+RIP=0x000000005a1fffb0, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x0000007fb40ff568)
+0x0000007fb40ff568:   0000000059e1240d 00000206db020350
+0x0000007fb40ff578:   00000206f8cf8800 0000000000000000
+0x0000007fb40ff588:   0000000000000000 0000000000000000
+0x0000007fb40ff598:   0000000000000000 0000000000000023
+0x0000007fb40ff5a8:   0000000059e19b40 0000007fb40ff7b0
+0x0000007fb40ff5b8:   0000000000000000 00000206f8cf8800
+0x0000007fb40ff5c8:   0000000000000000 0000000000000000
+0x0000007fb40ff5d8:   0000000000000000 0000000000000000
+0x0000007fb40ff5e8:   0000000000000000 0000000000000000
+0x0000007fb40ff5f8:   0000000000000000 0000000000000000
+0x0000007fb40ff608:   0000000059e6c56a 00000206f8c6a1c0
+0x0000007fb40ff618:   00000206f8cf8800 0000000000000000
+0x0000007fb40ff628:   0000000000000000 0000000000000000
+0x0000007fb40ff638:   0000000000000000 0000000000000000
+0x0000007fb40ff648:   0000000000000000 0000000000000000
+0x0000007fb40ff658:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x000000005a1fffb0)
+0x000000005a1fff90:   56 4d 20 50 65 72 69 6f 64 69 63 20 54 61 73 6b
+0x000000005a1fffa0:   20 54 68 72 65 61 64 00 d8 57 2d 5a 00 00 00 00
+0x000000005a1fffb0:   a0 1a e6 59 00 00 00 00 00 30 e1 59 00 00 00 00
+0x000000005a1fffc0:   00 9a e1 59 00 00 00 00 70 15 18 5a 00 00 00 00 
+
+
+Register to memory mapping:
+
+RAX=0x00000206f8c48000 is a thread
+RBX=0x00000206db020350 is an unknown value
+RCX=0x00000206f8c43270 is an unknown value
+RDX=0x0000000000001388 is an unknown value
+RSP=0x0000007fb40ff568 is an unknown value
+RBP=0x0000000000000002 is an unknown value
+RSI=0x000000005a3ec9f0 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0000000000001365 is an unknown value
+R9 =0x0000000000000083 is an unknown value
+R10=0x00000000546c6148 is an unknown value
+R11=0x000000020d667c31 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x0000000000000023 is an unknown value
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x0000007fb4000000,0x0000007fb4100000],  sp=0x0000007fb40ff568,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5fffb0]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000206f8cf2000 JavaThread "Service Thread" daemon [_thread_blocked, id=23948, stack(0x0000007fb3f00000,0x0000007fb4000000)]
+  0x00000206f8c68000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=16260, stack(0x0000007fb3e00000,0x0000007fb3f00000)]
+  0x00000206f8c63000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=20848, stack(0x0000007fb3d00000,0x0000007fb3e00000)]
+  0x00000206f8c60000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=22208, stack(0x0000007fb3c00000,0x0000007fb3d00000)]
+  0x00000206f8c55800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=21156, stack(0x0000007fb3b00000,0x0000007fb3c00000)]
+  0x00000206f8c48000 JavaThread "Thread-0" daemon [_thread_in_native, id=25032, stack(0x0000007fb3900000,0x0000007fb3a00000)]
+  0x00000206f8c47000 JavaThread "Thread-1" daemon [_thread_in_native, id=24896, stack(0x0000007fb3a00000,0x0000007fb3b00000)]
+  0x00000206f8a6f800 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=21276, stack(0x0000007fb3800000,0x0000007fb3900000)]
+  0x00000206f8a13000 JavaThread "Attach Listener" daemon [_thread_blocked, id=25872, stack(0x0000007fb3700000,0x0000007fb3800000)]
+  0x00000206f8a12800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26100, stack(0x0000007fb3600000,0x0000007fb3700000)]
+  0x00000206f6daa800 JavaThread "Finalizer" daemon [_thread_blocked, id=6168, stack(0x0000007fb3500000,0x0000007fb3600000)]
+  0x00000206f6da1000 JavaThread "Reference Handler" daemon [_thread_blocked, id=1284, stack(0x0000007fb3400000,0x0000007fb3500000)]
+  0x00000206db03a800 JavaThread "main" [_thread_in_native, id=22048, stack(0x0000007fb2a00000,0x0000007fb2b00000)]
+
+Other Threads:
+  0x00000206f6d6e000 VMThread [stack: 0x0000007fb3300000,0x0000007fb3400000] [id=21412]
+=>0x00000206f8cf8800 WatcherThread [stack: 0x0000007fb4000000,0x0000007fb4100000] [id=19340]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000206db020350] PeriodicTask_lock - owner thread: 0x00000206f8cf8800
+
+heap address: 0x00000006c1600000, size: 4074 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 76288K, used 9189K [0x000000076b200000, 0x0000000770700000, 0x00000007c0000000)
+  eden space 65536K, 14% used [0x000000076b200000,0x000000076baf9610,0x000000076f200000)
+  from space 10752K, 0% used [0x000000076fc80000,0x000000076fc80000,0x0000000770700000)
+  to   space 10752K, 0% used [0x000000076f200000,0x000000076f200000,0x000000076fc80000)
+ ParOldGen       total 175104K, used 0K [0x00000006c1600000, 0x00000006cc100000, 0x000000076b200000)
+  object space 175104K, 0% used [0x00000006c1600000,0x00000006c1600000,0x00000006cc100000)
+ Metaspace       used 4289K, capacity 4746K, committed 4864K, reserved 1056768K
+  class space    used 465K, capacity 498K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00000206eccb0000,0x00000206ed4b0000] byte_map_base: 0x00000206e96a5000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005a3f7850
+ Begin Bits: [0x00000206eda00000, 0x00000206f19a8000)
+ End Bits:   [0x00000206f19a8000, 0x00000206f5950000)
+
+Polling page: 0x00000206db2a0000
+
+CodeCache: size=245760Kb used=1345Kb max_used=1357Kb free=244414Kb
+ bounds [0x00000206dd8f0000, 0x00000206ddb60000, 0x00000206ec8f0000]
+ total_blobs=377 nmethods=102 adapters=188
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.030 Thread 0x00000206f8c68000 nmethod 97 0x00000206dda3df50 code [0x00000206dda3e0e0, 0x00000206dda3e630]
+Event: 1.030 Thread 0x00000206f8c68000   99       3       java.lang.AbstractStringBuilder::newCapacity (39 bytes)
+Event: 1.030 Thread 0x00000206f8c68000 nmethod 99 0x00000206dda3e890 code [0x00000206dda3ea20, 0x00000206dda3ee10]
+Event: 1.030 Thread 0x00000206f8c68000  100       3       java.lang.StringBuilder::toString (17 bytes)
+Event: 1.030 Thread 0x00000206f8c68000 nmethod 100 0x00000206dda3f090 code [0x00000206dda3f200, 0x00000206dda3f410]
+Event: 1.030 Thread 0x00000206f8c68000  102       3       java.lang.String::<init> (10 bytes)
+Event: 1.030 Thread 0x00000206f8c68000 nmethod 102 0x00000206dda3f510 code [0x00000206dda3f660, 0x00000206dda3f838]
+Event: 1.030 Thread 0x00000206f8c68000  101       3       java.lang.StringBuilder::<init> (7 bytes)
+Event: 1.030 Thread 0x00000206f8c68000 nmethod 101 0x00000206dda3f910 code [0x00000206dda3fa80, 0x00000206dda3fd38]
+Event: 1.033 Thread 0x00000206f8c55800 nmethod 98 0x00000206dda43010 code [0x00000206dda43160, 0x00000206dda43708]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (9 events):
+Event: 0.034 Thread 0x00000206db03a800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076b208288) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot
+Event: 0.034 Thread 0x00000206db03a800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x000000076b208570) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot\src\hotspot\src\s
+Event: 0.237 Thread 0x00000206db03a800 Exception <a 'java/lang/NoClassDefFoundError': jdk/internal/loader/NativeLibraries> (0x000000076b36e018) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot\src\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 206]
+Event: 0.237 Thread 0x00000206db03a800 Exception <a 'java/lang/NoSuchMethodError': load0> (0x000000076b36e478) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot\src\hotspot\src\share\vm\prims\jni.cpp, line 1616]
+Event: 0.238 Thread 0x00000206db03a800 Exception <a 'java/lang/NoClassDefFoundError': jdk/internal/vm/VMSupport> (0x000000076b370b18) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot\src\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 206]
+Event: 0.375 Thread 0x00000206db03a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076b3f9b30) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot\src\hotspot\src\share\vm\prims\jvm.cpp, line 1524]
+Event: 0.375 Thread 0x00000206db03a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076b3f9f28) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot\src\hotspot\src\share\vm\prims\jvm.cpp, line 1524]
+Event: 0.375 Thread 0x00000206db03a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076b3fd1c8) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot\src\hotspot\src\share\vm\prims\jvm.cpp, line 1524]
+Event: 0.375 Thread 0x00000206db03a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076b3fd5c0) thrown at [C:\wsjdk\Corretto8Src\installers\windows\zip\corretto-build\buildRoot\src\hotspot\src\share\vm\prims\jvm.cpp, line 1524]
+
+Events (10 events):
+Event: 1.026 loading class sun/util/resources/TimeZoneNames
+Event: 1.026 loading class sun/util/resources/TimeZoneNamesBundle
+Event: 1.026 loading class sun/util/resources/TimeZoneNamesBundle done
+Event: 1.026 loading class sun/util/resources/TimeZoneNames done
+Event: 1.026 loading class sun/util/resources/en/TimeZoneNames_en
+Event: 1.026 loading class sun/util/resources/en/TimeZoneNames_en done
+Event: 1.027 loading class java/util/LinkedHashMap$LinkedKeySet
+Event: 1.027 loading class java/util/LinkedHashMap$LinkedKeySet done
+Event: 4.353 Executing VM operation: EnableBiasedLocking
+Event: 4.353 Executing VM operation: EnableBiasedLocking done
+
+
+Dynamic libraries:
+0x00007ff6b3fa0000 - 0x00007ff6b3fda000 	C:\Users\31936\.jdks\corretto-1.8.0_332\bin\java.exe
+0x00007ff817b20000 - 0x00007ff817d29000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff816fe0000 - 0x00007ff81709d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8151a0000 - 0x00007ff815519000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8163f0000 - 0x00007ff81649e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff815da0000 - 0x00007ff815e43000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff817150000 - 0x00007ff8171ee000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8161f0000 - 0x00007ff816310000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff817470000 - 0x00007ff81761c000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8155c0000 - 0x00007ff8155e6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff817620000 - 0x00007ff817649000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff815080000 - 0x00007ff815192000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff815520000 - 0x00007ff8155bd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff8158a0000 - 0x00007ff8159b1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffff80c0000 - 0x00007ffff8365000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ff8170a0000 - 0x00007ff8170d1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fffa8620000 - 0x00007fffa870f000 	C:\Users\31936\.jdks\corretto-1.8.0_332\jre\bin\msvcr120.dll
+0x00007fffa7e00000 - 0x00007fffa7ea6000 	C:\Users\31936\.jdks\corretto-1.8.0_332\jre\bin\msvcp120.dll
+0x0000000059c00000 - 0x000000005a476000 	C:\Users\31936\.jdks\corretto-1.8.0_332\jre\bin\server\jvm.dll
+0x00007ff817260000 - 0x00007ff817268000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff80f1b0000 - 0x00007ff80f1e3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff811260000 - 0x00007ff811269000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff80d450000 - 0x00007ff80d45a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8171f0000 - 0x00007ff81725f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff811280000 - 0x00007ff81128f000 	C:\Users\31936\.jdks\corretto-1.8.0_332\jre\bin\verify.dll
+0x00007ffff86e0000 - 0x00007ffff8709000 	C:\Users\31936\.jdks\corretto-1.8.0_332\jre\bin\java.dll
+0x00007fffebf10000 - 0x00007fffebf3a000 	C:\Users\31936\.jdks\corretto-1.8.0_332\jre\bin\instrument.dll
+0x00007fffe0070000 - 0x00007fffe00ff000 	C:\Users\31936\AppData\Local\Temp\libasyncProfiler.dll
+0x00007ff815ba0000 - 0x00007ff815d3a000 	C:\WINDOWS\System32\ole32.dll
+0x00007ff815e70000 - 0x00007ff8161e8000 	C:\WINDOWS\System32\combase.dll
+0x00007ff816310000 - 0x00007ff8163e6000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff815d40000 - 0x00007ff815d9d000 	C:\WINDOWS\System32\SHLWAPI.dll
+0x00007fffffc70000 - 0x00007fffffcfd000 	C:\WINDOWS\SYSTEM32\MSVCP140.dll
+0x00007fffffd00000 - 0x00007fffffd1b000 	C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll
+0x00007fffffc60000 - 0x00007fffffc6c000 	C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll
+0x00007ffff86c0000 - 0x00007ffff86d6000 	C:\Users\31936\.jdks\corretto-1.8.0_332\jre\bin\zip.dll
+0x00007ff8164b0000 - 0x00007ff816c5f000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ff813040000 - 0x00007ff8138a8000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ff812ed0000 - 0x00007ff813036000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x00007ff8159c0000 - 0x00007ff815aaa000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ff814f40000 - 0x00007ff814f61000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007fffe0470000 - 0x00007fffe048a000 	D:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\bin\breakgen64.dll
+0x00007fffea260000 - 0x00007fffea27a000 	C:\Users\31936\.jdks\corretto-1.8.0_332\jre\bin\net.dll
+0x00007ff814630000 - 0x00007ff814697000 	C:\WINDOWS\system32\mswsock.dll
+0x00007fffa7b10000 - 0x00007fffa7c83000 	C:\Users\31936\AppData\Local\Temp\idea_msdia140_dll_temp_folder\msdia140.dll
+0x00007ff814200000 - 0x00007ff814218000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff812b40000 - 0x00007ff812d61000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ff8155f0000 - 0x00007ff81566f000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -javaagent:D:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\lib\idea_rt.jar=53631:D:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\bin -agentpath:C:\Users\31936\AppData\Local\Temp\libasyncProfiler.dll=start,jfr,libdia=C:\Users\31936\AppData\Local\Temp\idea_msdia140_dll_temp_folder\msdia140.dll,interval=1ms,file=C:\Users\31936\ElmAdminEntry_2022_05_18_121121.jfr -Dfile.encoding=UTF-8 
+java_command: com.elm.ElmAdminEntry
+java_class_path (initial): C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\charsets.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\access-bridge-64.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\cldrdata.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\dnsns.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\jaccess.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\jfxrt.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\localedata.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\nashorn.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\sunec.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\sunjce_provider.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\sunmscapi.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\sunpkcs11.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\ext\zipfs.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\jce.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\jfr.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\jfxswt.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\jsse.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\management-agent.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\resources.jar;C:\Users\31936\.jdks\corretto-1.8.0_332\jre\lib\rt.jar;C:\Users\31936\IdeaProjects\elme3\out\production\erlme;C:\Users\31936\IdeaProjects\elme3\lib\mysql-connector-java-5.1.49-bin.jar;D:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\lib\idea_rt.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=E:\jdk-18
+CLASSPATH=.;%JAVA_HOME\lib;E:\jdk-18lib\dt.jar;E:\jdk-18\lib\tools.jar
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\jdk-18\bin;E:\jdk-18jre\bin;E:\Program Files\Microsoft SQL Sever\Client SDK\ODBC\170\Tools\Binn\;E:\Program Files\150\Tools\Binn\;E:\Program Files\Microsoft SQL Sever\150\Tools\Binn\;E:\Program Files\Microsoft SQL Sever\150\DTS\Binn\;E:\Program Files\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Users\31936\AppData\Local\Microsoft\WindowsApps;;E:\IntelliJ IDEA 2021.3.3\bin;;C:\Program Files\Azure Data Studio\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2022.1\bin;;E:\PyCharm2020\PyCharm 2020.1\bin;
+USERNAME=31936
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 22000 (10.0.22000.675)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 165 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16682800k(7602612k free), swap 19173168k(3392464k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.332-b08) for windows-amd64 JRE (1.8.0_332-b08), built on Apr 16 2022 08:31:02 by "Administrator" with MS VC++ 12.0 (VS2013)
+
+time: Wed May 18 12:11:27 2022
+timezone: ?D1¨²¡À¨º¡Á?¨º¡À??
+elapsed time: 5.392212 seconds (0d 0h 0m 5s)
+
